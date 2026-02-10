@@ -19,24 +19,27 @@ function autoScrollBook() {
 
 
 function moveButton() {
+    const noBtn = document.querySelector(".no-btn");
 
-    const button = document.querySelector(".no-btn");
-    const container = document.querySelector(".container");
+    const btnWidth = noBtn.offsetWidth;
+    const btnHeight = noBtn.offsetHeight;
 
-    if (!button || !container) return;
+    const maxX = window.innerWidth - btnWidth - 20;
+    const maxY = window.innerHeight - btnHeight - 20;
 
-    const containerWidth = container.clientWidth;
-    const containerHeight = container.clientHeight;
+    let randomX = Math.floor(Math.random() * maxX);
+    let randomY = Math.floor(Math.random() * maxY);
 
-    const buttonWidth = button.offsetWidth;
-    const buttonHeight = button.offsetHeight;
+    // Ensure it never goes negative
+    if (randomX < 10) randomX = 10;
+    if (randomY < 10) randomY = 10;
 
-    const x = Math.random() * (containerWidth - buttonWidth - 20);
-    const y = Math.random() * (containerHeight - buttonHeight - 20);
+    noBtn.style.position = "fixed";
+    noBtn.style.left = randomX + "px";
+    noBtn.style.top = randomY + "px";
 
-    button.style.position = "absolute";
-    button.style.left = x + "px";
-    button.style.top = y + "px";
+    // Add bounce effect
+    noBtn.style.transition = "all 0.3s ease-out";
 }
 
 
