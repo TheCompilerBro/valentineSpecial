@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Will You Be My Valentine💝?</title>
+
+  <link rel="stylesheet" href="code/style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body class="main-bg">
+
+  <audio id="globalMusic" loop>
+    <source src="assets/audio/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="floatingImages"></div>
+
+  <div id="landingSection">
+
+    <div class="container" id="mainBox">
+      <h1 class="question">Will You Be My Valentine? 💖</h1>
+
+      <p class="audio-text">Tap to play our song 🎵</p>
+
+      <div class="buttons">
+        <button class="yes-btn" onclick="celebrateYes()">YES</button>
+        <button class="no-btn" onclick="moveButton()">NO</button>
+        <button class="audio-btn" onclick="toggleMusic()">▶ Play Song</button>
+      </div>
+    </div>
+
+    <div id="loveMessage" class="love-text">
+      Forever Yours ❤️
+    </div>
+
+  </div>
+
+  <div id="proposalSection" style="display:none">
+
+    <button class="home-btn" onclick="goHome()">🏠 Back to Home</button>
+    <div id="heartRain"></div>
+
+
+    <h1>💌 A Special Message For You 💌</h1>
+
+    <div id="shareSection" class="share-box">
+
+      <h3>Share this Love 💌</h3>
+
+      <div class="share-icons">
+
+        <a href="#" onclick="shareWhatsApp()" class="share-btn whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <a href="#" onclick="shareFacebook()" class="share-btn facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+
+        <a href="#" onclick="shareInstagram()" class="share-btn instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="#" onclick="copyLink()" class="share-btn copy">
+          <i class="fas fa-link"></i>
+        </a>
+
+      </div>
+
+      <p id="copyMsg" class="copy-msg"></p>
+
+    </div>
+
+    <div class="book">
+
+      <div class="page">
+        <h2>Dear Love,</h2>
+        <p id="text1" class="typewriter"></p>
+      </div>
+
+      <div class="page">
+        <p id="text2" class="typewriter"></p>
+      </div>
+
+      <div class="page" id="memoriesSection" style="display:none;">
+        <h2>Our Memories 📸</h2>
+
+        <div class="gallery">
+          <img src="assets/images/img1.jpg">
+          <img src="assets/images/img2.jpg">
+          <img src="assets/images/img3.jpg">
+          <img src="assets/images/img4.jpg">
+          <img src="assets/images/img5.jpg">
+
+
+
+        </div>
+      </div>
+
+      <div class="page">
+        <p id="text3" class="typewriter"></p>
+      </div>
+
+      <div class="page">
+        <p id="text4" class="typewriter"></p>
+      </div>
+
+      <div class="page">
+        <p id="text5" class="typewriter"></p>
+      </div>
+
+    </div>
+
+    <div id="devFooter" class="dev-footer">
+
+      <div class="footer-content">
+
+        <h3>Crafted with Love by a Passionate Developer</h3>
+
+        <p class="dev-info">
+          A heartfelt Valentine message made specially to spread love and happiness 💘  
+          May this day be filled with beautiful moments and endless smiles.
+        </p>
+        <div class="social-links">
+      <a href="https://github.com/TheCompilerBro/TheCompilerBro" target="_blank">
+        <i class="fab fa-github"></i> Developer GitHub Profile
+      </a>
+      <a href="https://www.linkedin.com/in/puspendu-mallick-3185bb296" target="_blank" class="linkedin">
+    <i class="fab fa-linkedin"></i> LinkedIn Profile
+  </a>
+ <a href="https://www.instagram.com/puspendu_0_4/" target="_blank" class="instagram">
+  <i class="fab fa-instagram"></i> DM me on Instagram to customize your own name
+</a>
+
+    </div>
+        <p class="copyright">
+          Happy Valentine’s Day 🌹 | Spread Love Everywhere
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="code/script.js"></script>
+
+</body>
+</html>
